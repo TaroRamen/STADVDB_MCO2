@@ -1,0 +1,31 @@
+<header>
+    <div class="left">
+        <div class="header-btn" id="home-btn">
+            <p>Home</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="crash-btn" id="crash-main-btn" name="{{crashMain}}">
+            Master
+            <img src="./serverCrash.png">
+            <div id="crash-status-main">{{crashMain}}</div>
+        </div>
+
+        <div class="crash-btn" id="crash-slave1-btn" name="{{crashSlave1}}">
+            Slave1
+            <img src="./serverCrash.png">
+            <div id="crash-status-slave1">{{crashSlave1}}</div>
+        </div>
+
+        <div class="crash-btn" id="crash-slave2-btn" name="{{crashSlave2}}">
+            Slave2
+            <img src="./serverCrash.png">
+            <div id="crash-status-slave2">{{crashSlave2}}</div>
+        </div>
+    </div>
+
+    <video id='lightning'>
+        <source src="./Lightning.mp4" type="video/mp4">
+    </video>
+</header>

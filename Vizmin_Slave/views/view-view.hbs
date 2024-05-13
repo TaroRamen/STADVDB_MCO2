@@ -1,0 +1,19 @@
+<div class='view-container'>
+    <table>
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each reports as |report|}}
+            <tr>
+                <td>{{report.keyname}}</td>
+                <td>{{report.count}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <button class="submit-btn" id="view-view-submit-btn">Back</button>
+</div>

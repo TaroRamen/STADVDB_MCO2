@@ -1,0 +1,108 @@
+{{#with app as |app|}}
+    <div class="insert-container" id="update-container" name="{{app.apptid}}">
+
+        <div class="input-container">
+            <div class="text-container">
+                Patient ID
+            </div>
+            <input type="text" id="update-patientid-input" value="{{app.patientid}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Doctor ID
+            </div>
+            <input type="text" id="update-doctorid-input" value="{{app.doctorid}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Clinic ID
+            </div>
+            <input type="text" id="update-clinicid-input" value="{{app.clinicid}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                App Status
+            </div>
+            <select id="update-appstatus-input">
+                <option value="Complete" {{#ifEquals app.appstatus "Complete"}}selected{{/ifEquals}}>Complete</option>
+                <option value="Queued" {{#ifEquals app.appstatus "Queued"}}selected{{/ifEquals}}>Queued</option>
+                <option value="NoShow" {{#ifEquals app.appstatus "NoShow"}}selected{{/ifEquals}}>NoShow</option>
+                <option value="Serving" {{#ifEquals app.appstatus "Serving"}}selected{{/ifEquals}}>Serving</option>
+                <option value="Cancel" {{#ifEquals app.appstatus "Cancel"}}selected{{/ifEquals}}>Cancel</option>
+                <option value="Skip" {{#ifEquals app.appstatus "Skip"}}selected{{/ifEquals}}>Skip</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Time Queued
+            </div>
+            <input type="datetime-local" id="update-timequeued-input" value="{{formatDateTime app.timequeued}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Queue Date
+            </div>
+            <input type="datetime-local" id="update-queuedate-input" value="{{formatDateTime app.queuedate}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Start Time
+            </div>
+            <input type="datetime-local" id="update-starttime-input" value="{{formatDateTime app.starttime}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                End Time
+            </div>
+            <input type="datetime-local" id="update-endtime-input" value="{{formatDateTime app.endtime}}">
+        </div>
+
+
+        <div class="input-container">
+            <div class="text-container">
+                Appointment Type
+            </div>
+            <select id="update-apptype-input">
+                <option value="Consultation" {{#ifEquals app.apptype "Consultation"}}selected{{/ifEquals}}>Consultation</option>
+                <option value="Inpatient" {{#ifEquals app.apptype "Inpatient"}}selected{{/ifEquals}}>Inpatient</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Is Virtual
+            </div>
+            <select id="update-isvirtual-input">
+                <option value="True" {{#ifEquals app.isvirtual "True"}}selected{{/ifEquals}}>True</option>
+                <option value="False" {{#ifEquals app.isvirtual "False"}}selected{{/ifEquals}}>False</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Region
+            </div>
+            <select id="update-clinicregion-input">
+                <option value="Western Visayas (VI)" {{#ifEquals app.clinicregion "Western Visayas (VI)"}}selected{{/ifEquals}}>Western Visayas (VI)</option>
+                <option value="Central Visayas (VII)" {{#ifEquals app.clinicregion "Central Visayas (VII)"}}selected{{/ifEquals}}>Central Visayas (VII)</option>
+                <option value="Eastern Visayas (VIII)" {{#ifEquals app.clinicregion "Eastern Visayas (VIII)"}}selected{{/ifEquals}}>Eastern Visayas (VIII)</option>
+                <option value="Zamboanga Peninsula (IX)" {{#ifEquals app.clinicregion "Zamboanga Peninsula (IX)"}}selected{{/ifEquals}}>Zamboanga Peninsula (IX)</option>
+                <option value="Northern Mindanao (X)" {{#ifEquals app.clinicregion "Northern Mindanao (X)"}}selected{{/ifEquals}}>Northern Mindanao (X)</option>
+                <option value="Davao Region (XI)" {{#ifEquals app.clinicregion "Davao Region (XI)"}}selected{{/ifEquals}}>Davao Region (XI)</option>
+                <option value="SOCCSKSARGEN (Cotabato Region) (XII)" {{#ifEquals app.clinicregion "SOCCSKSARGEN (Cotabato Region) (XII)"}}selected{{/ifEquals}}>SOCCSKSARGEN (Cotabato Region) (XII)</option>
+                <option value="Caraga (XIII)" {{#ifEquals app.clinicregion "Caraga (XIII)"}}selected{{/ifEquals}}>Caraga (XIII)</option>
+                <option value="Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)" {{#ifEquals app.clinicregion "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)"}}selected{{/ifEquals}}>Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)</option>
+            </select>
+        </div>
+
+        <button class="submit-btn" id="update-insert-submit-btn">Update</button>
+
+    </div>
+{{/with}}

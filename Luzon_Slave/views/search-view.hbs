@@ -1,0 +1,39 @@
+<div class='view-container'>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Doctor ID</th>
+                <th>Clinic ID</th>
+                <th>App ID</th>
+                <th>App Status</th>
+                <th>Time Queued</th>
+                <th>Queue Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Appointment Type</th>
+                <th>Is Virtual</th>
+                <th>Clinic Region</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each apps as |app|}}
+            <tr>
+                <td>{{app.patientid}}</td>
+                <td>{{app.doctorid}}</td>
+                <td>{{app.clinicid}}</td>
+                <td>{{app.apptid}}</td>
+                <td>{{app.appstatus}}</td>
+                <td>{{app.timequeued}}</td>
+                <td>{{app.queuedate}}</td>
+                <td>{{app.starttime}}</td>
+                <td>{{app.endtime}}</td>
+                <td>{{app.apptype}}</td>
+                <td>{{app.isvirtual}}</td>
+                <td>{{app.clinicregion}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <button class="submit-btn" id="search-view-submit-btn">Back</button>
+</div>

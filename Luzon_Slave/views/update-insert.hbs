@@ -1,0 +1,107 @@
+{{#with app as |app|}}
+    <div class="insert-container" id="update-container" name="{{app.apptid}}">
+
+        <div class="input-container">
+            <div class="text-container">
+                Patient ID
+            </div>
+            <input type="text" id="update-patientid-input" value="{{app.patientid}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Doctor ID
+            </div>
+            <input type="text" id="update-doctorid-input" value="{{app.doctorid}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Clinic ID
+            </div>
+            <input type="text" id="update-clinicid-input" value="{{app.clinicid}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                App Status
+            </div>
+            <select id="update-appstatus-input">
+                <option value="Complete" {{#ifEquals app.appstatus "Complete"}}selected{{/ifEquals}}>Complete</option>
+                <option value="Queued" {{#ifEquals app.appstatus "Queued"}}selected{{/ifEquals}}>Queued</option>
+                <option value="NoShow" {{#ifEquals app.appstatus "NoShow"}}selected{{/ifEquals}}>NoShow</option>
+                <option value="Serving" {{#ifEquals app.appstatus "Serving"}}selected{{/ifEquals}}>Serving</option>
+                <option value="Cancel" {{#ifEquals app.appstatus "Cancel"}}selected{{/ifEquals}}>Cancel</option>
+                <option value="Skip" {{#ifEquals app.appstatus "Skip"}}selected{{/ifEquals}}>Skip</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Time Queued
+            </div>
+            <input type="datetime-local" id="update-timequeued-input" value="{{formatDateTime app.timequeued}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Queue Date
+            </div>
+            <input type="datetime-local" id="update-queuedate-input" value="{{formatDateTime app.queuedate}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Start Time
+            </div>
+            <input type="datetime-local" id="update-starttime-input" value="{{formatDateTime app.starttime}}">
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                End Time
+            </div>
+            <input type="datetime-local" id="update-endtime-input" value="{{formatDateTime app.endtime}}">
+        </div>
+
+
+        <div class="input-container">
+            <div class="text-container">
+                Appointment Type
+            </div>
+            <select id="update-apptype-input">
+                <option value="Consultation" {{#ifEquals app.apptype "Consultation"}}selected{{/ifEquals}}>Consultation</option>
+                <option value="Inpatient" {{#ifEquals app.apptype "Inpatient"}}selected{{/ifEquals}}>Inpatient</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Is Virtual
+            </div>
+            <select id="update-isvirtual-input">
+                <option value="True" {{#ifEquals app.isvirtual "True"}}selected{{/ifEquals}}>True</option>
+                <option value="False" {{#ifEquals app.isvirtual "False"}}selected{{/ifEquals}}>False</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <div class="text-container">
+                Region
+            </div>
+            <select id="update-clinicregion-input">
+               <option value="Ilocos Region (I)" {{#ifEquals app.clinicregion "Ilocos Region (I)"}}selected{{/ifEquals}}>Ilocos Region (I)</option>
+                <option value="Cagayan Valley (II)" {{#ifEquals app.clinicregion "Cagayan Valley (II)"}}selected{{/ifEquals}}>Cagayan Valley (II)</option>
+                <option value="Central Luzon (III)" {{#ifEquals app.clinicregion "Central Luzon (III)"}}selected{{/ifEquals}}>Central Luzon (III)</option>
+                <option value="CALABARZON (IV-A)" {{#ifEquals app.clinicregion "CALABARZON (IV-A)"}}selected{{/ifEquals}}>CALABARZON (IV-A)</option>
+                <option value="MIMAROPA (IV-B)" {{#ifEquals app.clinicregion "MIMAROPA (IV-B)"}}selected{{/ifEquals}}>MIMAROPA (IV-B)</option>
+                <option value="Bicol Region (V)" {{#ifEquals app.clinicregion "Bicol Region (V)"}}selected{{/ifEquals}}>Bicol Region (V)</option>
+                <option value="Cordillera Administrative Region (CAR)" {{#ifEquals app.clinicregion "Cordillera Administrative Region (CAR)"}}selected{{/ifEquals}}>Cordillera Administrative Region (CAR)</option>
+                <option value="National Capital Region (NCR)" {{#ifEquals app.clinicregion "National Capital Region (NCR)"}}selected{{/ifEquals}}>National Capital Region (NCR)</option>
+            </select>
+        </div>
+
+        <button class="submit-btn" id="update-insert-submit-btn">Update</button>
+
+    </div>
+{{/with}}
