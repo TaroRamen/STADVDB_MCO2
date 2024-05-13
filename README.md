@@ -1,0 +1,6 @@
+# STADVDB-MCO2
+STADVDB MCO2
+
+Master 20030
+Luzon_Slave 20031
+Vizmin_Slave 20032
